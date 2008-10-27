@@ -1,0 +1,13 @@
+Perl 組み込みの vec() によるビットベクトルに対して rank() / select() 可能にするクラス
+vec() による Succinct Data Structure
+
+- c.f. http://codezine.jp/article/detail/260
+
+* TODO
+
+- Bit::Vector は名前 CPAN のと被った
+- Bit::Vector::Succinct にはサイズ指定が必要? (範囲を超えたとき結果がおかしい)
+- Bit::Vector は byte 単位の入出力だが SucBV はワード単位 → 32 bit ずつ扱う?
+- select() 実装する
+- ベンチマーク
+- popcount() を XS に?

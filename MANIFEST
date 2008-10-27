@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Bit-Vector-Succinct.t
+lib/Bit/Vector/Succinct.pm

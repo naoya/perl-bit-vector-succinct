@@ -75,7 +75,7 @@ __END__
 
 =head1 NAME
 
-Bit::Vector::Succinct - Succinct Data Structure for a bit vector
+Bit::Vector::Succinct - A Succinct Data Structure for a bit vector
 
 =head1 SYNOPSIS
 

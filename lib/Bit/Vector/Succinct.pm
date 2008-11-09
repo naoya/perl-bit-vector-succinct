@@ -70,6 +70,30 @@ sub rank {
     $bit ? $self->_rank1($pos) : $pos - $self->_rank1($pos);
 }
 
+## k meets rank(k) < j <= rank(k + 1)
+sub select {
+    my ($self, $pos, $bit) = @_;
+    use integer;
+
+    my $i  = 0;
+    my $j = $self->size;
+
+    while ($i < $j) {
+        my $k = ($i + $j) / 2;
+        if ($self->rank($k, $bit) <= $pos) {
+            $i = $k + 1;
+        } else {
+            $j = $k;
+        }
+    }
+
+    if ($i == $self->size) {
+        return;
+    }
+
+    return $i;
+}
+
 1;
 __END__
 

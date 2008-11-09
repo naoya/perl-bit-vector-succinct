@@ -13,7 +13,7 @@ $vec->set(3);
 
 my $sucbv = Bit::Vector::Succinct->new($vec);
 
-is $sucbv->size,        32;
+is $sucbv->size, 32;
 
 ## rank1
 is $sucbv->rank(0, 1),   0;
@@ -49,7 +49,7 @@ $vec->set(128);
 
 $sucbv = Bit::Vector::Succinct->new($vec);
 
-is $sucbv->size,        136; # hmm ...
+is $sucbv->size, 136; # hmm ...
 
 is $sucbv->rank(1, 1), 1;
 is $sucbv->rank(8, 1), 1;

@@ -67,7 +67,7 @@ sub rank {
     my ($self, $pos, $bit) = @_;
     $pos++;
 
-    $bit ? $self->_rank1($pos) : $pos - _rank1($pos);
+    $bit ? $self->_rank1($pos) : $pos - $self->_rank1($pos);
 }
 
 1;

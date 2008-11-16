@@ -1,4 +1,4 @@
-package Bit::Vector;
+package Bit::Vector::Succinct::Raw;
 use strict;
 use warnings;
 
@@ -36,7 +36,7 @@ sub get_block {
     ## perl の vec は BITS が 16 以上の場合入力を BITS/8 にグループ化して
     ## big endian format (pack の n/N) で数値に変換する∴ L ではなく N を使う
 
-    return Bit::Vector->new( pack("N", vec($$self, $pos, BSIZE)) );
+    return Bit::Vector::Succinct::Raw->new( pack("N", vec($$self, $pos, BSIZE)) );
 }
 
 sub bit_length {

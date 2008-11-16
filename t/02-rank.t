@@ -3,10 +3,10 @@ use warnings;
 
 use Test::More qw/no_plan/;
 
-use Bit::Vector;
+use Bit::Vector::Succinct::Raw;
 use Bit::Vector::Succinct;
 
-my $vec = Bit::Vector->new;
+my $vec = Bit::Vector::Succinct::Raw->new;
 $vec->set(1);
 $vec->set(2);
 $vec->set(3);
@@ -41,7 +41,7 @@ is $sucbv->rank(8, 0),   6;
 # is $sucbv->rank(128, 1), 3;
 # is $sucbv->rank(255, 1), 3;
 
-$vec = Bit::Vector->new;
+$vec = Bit::Vector::Succinct::Raw->new;
 $vec->set(1);
 $vec->set(23);
 $vec->set(35);

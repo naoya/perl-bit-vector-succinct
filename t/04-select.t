@@ -3,10 +3,10 @@ use warnings;
 
 use Test::More qw/no_plan/;
 
-use Bit::Vector;
+use Bit::Vector::Succinct::Raw;
 use Bit::Vector::Succinct;
 
-my $vec = Bit::Vector->new;
+my $vec = Bit::Vector::Succinct::Raw->new;
 $vec->set(1);
 $vec->set(2);
 $vec->set(3);
@@ -23,7 +23,7 @@ is $sucbv->select(3, 1), undef;
 is $sucbv->select(0, 0), 0;
 is $sucbv->select(1, 0), 4;
 
-$vec = Bit::Vector->new;
+$vec = Bit::Vector::Succinct::Raw->new;
 $vec->set(1);
 $vec->set(23);
 $vec->set(35);

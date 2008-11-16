@@ -3,9 +3,9 @@ use warnings;
 
 use Test::More qw/no_plan/;
 
-use Bit::Vector;
+use Bit::Vector::Succinct::Raw;
 
-my $vec = Bit::Vector->new;
+my $vec = Bit::Vector::Succinct::Raw->new;
 
 is $vec->length,      4;
 is $vec->bit_length, 32;
@@ -36,7 +36,7 @@ $vec->set(32 => 1);
 is $vec->as_number,   6;
 is $vec->length,      5;
 is $vec->bit_length,  32 + 8;
-is $vec->as_bitstring, '0110000000000000000000000000000010000000'; # ここ 64 bit かな...
+is $vec->as_bitstring, '0110000000000000000000000000000010000000';
 
 my $block = $vec->get_block(0);
 
